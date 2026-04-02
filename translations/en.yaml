@@ -1,0 +1,40 @@
+configuration:
+  paperless_url:
+    name: Paperless URL (intern)
+    description: >
+      Interne URL deiner Paperless-ngx Instanz.
+      Beispiel: http://192.168.1.179:100
+  paperless_api_key:
+    name: Paperless API Token
+    description: >
+      API-Token aus Paperless → Profil → Mein Profil → 🔄 generieren.
+      Wird für den direkten Zugriff auf die Paperless REST API benötigt.
+  paperless_public_url:
+    name: Öffentliche URL (optional)
+    description: >
+      Externe HTTPS-URL des MCP-Servers (z.B. via Cloudflare Tunnel).
+      Beispiel: https://paperless-mcp.deinedomain.de
+      Wird für OAuth-Redirects und Log-Ausgaben verwendet.
+  bearer_token:
+    name: Bearer Token (optional)
+    description: >
+      Wird beim ersten Start automatisch generiert und gespeichert.
+      Nur ausfüllen wenn du einen eigenen Token verwenden möchtest.
+      Überlebt Add-on Updates.
+  oauth_client_id:
+    name: OAuth Client ID (optional)
+    description: >
+      Wird beim ersten Start automatisch generiert.
+      Für Claude und ChatGPT Connector-Konfiguration verwenden.
+      Überlebt Add-on Updates.
+  oauth_client_secret:
+    name: OAuth Client Secret (optional)
+    description: >
+      Wird beim ersten Start automatisch generiert.
+      Für Claude und ChatGPT Connector-Konfiguration verwenden.
+      Überlebt Add-on Updates.
+  log_level:
+    name: Log Level
+    description: >
+      Detailgrad der Log-Ausgaben.
+      'info' für normalen Betrieb, 'debug' für Fehleranalyse.

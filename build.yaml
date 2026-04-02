@@ -1,0 +1,2 @@
+# Kein build_from nötig - Dockerfile verwendet ghcr.io/baruchiro/paperless-mcp direkt
+

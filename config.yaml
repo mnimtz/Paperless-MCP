@@ -1,0 +1,41 @@
+name: "Paperless-ngx MCP Server"
+version: "1.1.4"
+slug: "paperless_mcp"
+description: "MCP Server für Paperless-ngx mit OAuth 2.0 — Claude und ChatGPT greifen direkt auf dein Dokumentenarchiv zu"
+url: "https://github.com/marcusnimtz/ha-paperless-mcp"
+arch:
+  - aarch64
+  - amd64
+  - armhf
+  - armv7
+startup: application
+boot: auto
+init: false
+
+ports:
+  3020/tcp: 3020
+
+ports_description:
+  3020/tcp: "MCP Server (SSE)"
+
+options:
+  paperless_url: "http://192.168.1.179:100"
+  paperless_api_key: ""
+  paperless_public_url: ""
+  bearer_token: ""
+  oauth_client_id: ""
+  oauth_client_secret: ""
+  log_level: "info"
+
+schema:
+  paperless_url: "url"
+  paperless_api_key: "str"
+  paperless_public_url: "str?"
+  bearer_token: "str?"
+  oauth_client_id: "str?"
+  oauth_client_secret: "str?"
+  log_level: "list(debug|info|warning|error)?"
+
+map:
+  - type: addon_config
+    read_only: false
